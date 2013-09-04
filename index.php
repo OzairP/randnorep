@@ -31,8 +31,8 @@
     	<h1>Random No Repeat</h1>
     	<h2>By Ozair Patel</h2>
     	<br><br>
-    		From: <input class="input-mini" type="text" id="from" placeholder="1"><br>
-    		To: <input class="input-mini" type="text" id="to" placeholder="100"><br>
+    		From: <input class="input-mini" type="text" id="from" placeholder="1" required><br>
+    		To: <input class="input-mini" type="text" id="to" placeholder="100" required><br>
     		<input type="submit" id="submit" class="btn" value="Generate">
     	<h4 id="result">Result: RANDOM!</h5>
     	<legend>
@@ -49,19 +49,23 @@
             $("#used").load("usernum.php");
         });
 		$("#submit").click(function(){
-			var from = $("#from").val();
-			var to = $("#to").val();
-            var from_int = parseInt(from);
-            var to_int = parseInt(to);
-            if(to_int <= from_int){
-                alert("Invalid Values");
-                return false;
-            }
-            var totalInts = to_int - from_int + 1;
-			var path = "generate.php?from=" + from + "&to=" + to + "&totalInts=" + Math.abs(totalInts);
-			$("#result").load(path, function(){
-				$("#used").load("usernum.php");
-			});
+    			var from = $("#from").val();
+    			var to = $("#to").val();
+                var from_int = parseInt(from);
+                var to_int = parseInt(to);
+                if(from !== "" && to !== ""){
+                    if(to_int <= from_int){
+                        alert("Invalid Values");
+                        return false;
+                    }
+                    var totalInts = to_int - from_int + 1;
+        			var path = "generate.php?from=" + from + "&to=" + to + "&totalInts=" + Math.abs(totalInts);
+        			$("#result").load(path, function(){
+        				$("#used").load("usernum.php");
+        			});
+                }else{
+                    alert("No values entered");
+                }
 		});
 	</script>
   </body>
