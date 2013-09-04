@@ -35,9 +35,9 @@
     		To: <input class="input-mini" type="text" id="to" placeholder="100" required><br>
     		<input type="submit" id="submit" class="btn" value="Generate"><br><br>
     		<div id="alert"></div>
-    	<h4 id="result">Result: RANDOM!</h5>
+    	<h3 id="result">Result: RANDOM!</h3>
     	<legend>
-    		<h5>Past Numbers</h6><a href="killses.php"><button id="reset" class="btn btn-danger pull-right">Reset</button></a>
+    		<h5>Past Numbers</h5><a href="killses.php"><button id="reset" class="btn btn-danger pull-right">Reset</button></a>
     	</legend>
     	<ul id="used">
     	</ul>
@@ -57,7 +57,7 @@
                 var to_int = parseInt(to);
                 if(from !== "" && to !== ""){
                     if(to_int <= from_int){
-                        $('#alert').prepend('<div class="alert alert-danger"><strong>Error:</strong> Your from integer must be smaller than your to integer!</div>');
+                        $('#alert').prepend('<div class="alert alert-danger"><strong>Error:</strong> Your FROM integer must be smaller than your TO integer!</div>');
                         return false;
                     }
                     var totalInts = to_int - from_int + 1;
