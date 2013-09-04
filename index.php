@@ -33,14 +33,9 @@
     	<br><br>
     		From: <input class="input-mini" type="text" id="from" placeholder="1" required><br>
     		To: <input class="input-mini" type="text" id="to" placeholder="100" required><br>
-<<<<<<< HEAD
-    		<input type="submit" id="submit" class="btn" value="Generate">
-    	<h3 id="result">Result: RANDOM!</h3>
-=======
     		<input type="submit" id="submit" class="btn" value="Generate"><br><br>
     		<div id="alert"></div>
     	<h4 id="result">Result: RANDOM!</h5>
->>>>>>> 9b2fb005bd33a27850e9decaf1dd5e0d56073126
     	<legend>
     		<h5>Past Numbers</h6><a href="killses.php"><button id="reset" class="btn btn-danger pull-right">Reset</button></a>
     	</legend>
