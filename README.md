@@ -10,3 +10,5 @@
 <h2>Usage</h2>
 Enter two numbers, bam generated a number, and a list. Because we're cool.<br>
 Bam you learn't it.
+<h2>Example</h2>
+<a href="http://www.ozairpatel.com/utils/randnorep/">http://www.ozairpatel.com/utils/randnorep/</a>
