@@ -33,7 +33,8 @@
     	<br><br>
     		From: <input class="input-mini" type="text" id="from" placeholder="1" required><br>
     		To: <input class="input-mini" type="text" id="to" placeholder="100" required><br>
-    		<input type="submit" id="submit" class="btn" value="Generate">
+    		<input type="submit" id="submit" class="btn" value="Generate"><br><br>
+    		<div id="alert"></div>
     	<h4 id="result">Result: RANDOM!</h5>
     	<legend>
     		<h5>Past Numbers</h6><a href="killses.php"><button id="reset" class="btn btn-danger pull-right">Reset</button></a>
@@ -55,16 +56,17 @@
                 var to_int = parseInt(to);
                 if(from !== "" && to !== ""){
                     if(to_int <= from_int){
-                        alert("Invalid Values");
+                        $('#alert').prepend('<div class="alert alert-danger"><strong>Error:</strong> Your from integer must be smaller than your to integer!</div>');
                         return false;
                     }
                     var totalInts = to_int - from_int + 1;
         			var path = "generate.php?from=" + from + "&to=" + to + "&totalInts=" + Math.abs(totalInts);
         			$("#result").load(path, function(){
         				$("#used").load("usernum.php");
+                        		$('#alert').empty();
         			});
                 }else{
-                    alert("No values entered");
+                    $('#alert').prepend('<div class="alert alert-danger"><strong>Error:</strong> No values entered!</div>');
                 }
 		});
 	</script>
