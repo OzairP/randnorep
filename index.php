@@ -34,13 +34,14 @@
     		From: <input class="input-mini" type="text" id="from" placeholder="1" required><br>
     		To: <input class="input-mini" type="text" id="to" placeholder="100" required><br>
     		<input type="submit" id="submit" class="btn" value="Generate">
-    	<h4 id="result">Result: RANDOM!</h5>
+    	<h3 id="result">Result: RANDOM!</h3>
     	<legend>
     		<h5>Past Numbers</h6><a href="killses.php"><button id="reset" class="btn btn-danger pull-right">Reset</button></a>
     	</legend>
     	<ul id="used">
     	</ul>
     	<footer class="footer">
+            <h4>Find this Project on GitHub <a href="https://github.com/SuperAlpha/randnorep">Here</a>.</h4>
     		<h5>Powered By <a href="http://getbootstrap.com/">BootStrap</a>, <a href="http://httpd.apache.org/">Apache</a>, <a href="http://www.php.net">PHP 5</a>, and <a href="http://jquery.com">jQuery</a>.</h5> 
     	</footer>
 	</div>

@@ -9,12 +9,12 @@ session_start();
 			} while ($number == in_array($number, $userNumbers));
 			//echo "Imploded: \"" . $implodedNumbers . "\"";
 			$_SESSION['nums'] = $_SESSION['nums'] . ";" . $number;
-			echo $number;
+			echo "Result: " . $number;
 			//print_r($_SESSION);
 		}else{
 			$number = mt_rand($_GET['from'], $_GET['to']);
 			$_SESSION['nums'] = $number;
-			echo $number;
+			echo "Result: " . $number;
 		}
 	}else{
 		echo "No more numbers to generate.";
